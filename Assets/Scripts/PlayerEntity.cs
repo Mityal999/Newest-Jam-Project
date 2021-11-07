@@ -14,6 +14,8 @@ public class PlayerEntity : Entity
     public ShuffledSoundPlayer getHitSoundPlayer;
     public ShuffledSoundPlayer dieSoundPlayer;
 
+    public float regenHp;
+
     public float speed = 6.0f;
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
@@ -67,6 +69,17 @@ public class PlayerEntity : Entity
         {
             attackItem.TryAttack();
         }
+    }
+
+
+    private void FixedUpdate()
+    {
+        if (currentHp < initialHp)
+        {
+            currentHp += regenHp;
+            healthBar.SetHealth(currentHp);
+        }
+            
     }
 
 
