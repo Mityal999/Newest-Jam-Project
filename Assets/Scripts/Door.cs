@@ -17,7 +17,7 @@ public class Door : MonoBehaviour
             uiElement.SetActive(true);
             
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (true)
             {
                 SceneManager.LoadScene(level2);
             }
