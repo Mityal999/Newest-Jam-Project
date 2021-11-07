@@ -110,6 +110,7 @@ public class PlayerEntity : Entity
     {
         characterController.enabled = false;
         currentHp = initialHp;
+        healthBar.SetHealth(currentHp);
         transform.position = respawnTransform.position;
         characterController.enabled = true;
     }

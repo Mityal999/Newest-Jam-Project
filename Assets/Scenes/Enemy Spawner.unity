@@ -309,7 +309,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: a3c709a252b94e1409350e9080826643, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 1c5da5fbdf4d1bb428aac5e84b969795, type: 2}
 --- !u!1 &273754566
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,6 +713,7 @@ MonoBehaviour:
   respawnTransform: {fileID: 0}
   getHitSoundPlayer: {fileID: 1898581427}
   dieSoundPlayer: {fileID: 861311507}
+  regenHp: 0
   speed: 6
   jumpSpeed: 8
   gravity: 20
