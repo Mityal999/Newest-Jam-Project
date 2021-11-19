@@ -3463,7 +3463,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxDamage: 20
   accelerationTime: 0.08
+  colliderOffTime: 0.2
   relaxationTime: 0.4
+  itemCollider: {fileID: 961026769}
   damagingPartRb: {fileID: 1950006730}
 --- !u!59 &732797162
 HingeJoint:
@@ -5047,6 +5049,11 @@ PrefabInstance:
 --- !u!4 &961026768 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9ac34dd71982f214194e260dd4c9376a, type: 3}
+  m_PrefabInstance: {fileID: 961026767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &961026769 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 3451118302482216456, guid: 9ac34dd71982f214194e260dd4c9376a, type: 3}
   m_PrefabInstance: {fileID: 961026767}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1007794376

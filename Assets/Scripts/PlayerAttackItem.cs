@@ -7,10 +7,12 @@ public class PlayerAttackItem : MonoBehaviour
     public float maxDamage;
 
     public float accelerationTime;
+    public float colliderOffTime;
     public float relaxationTime;
 
     private bool isAttacking = false;
 
+    public Collider itemCollider;
     public Rigidbody damagingPartRb;
     private HingeJoint hinge;
     private AttackHitSoundSystem soundSystem;
@@ -27,6 +29,7 @@ public class PlayerAttackItem : MonoBehaviour
     public float GetCurrentDamage()
     {
         float mul = damagingPartRb.velocity.magnitude;
+        Debug.Log(mul);
         float normalizedMul = 0f;
 
         if (mul < 1f)
@@ -80,18 +83,23 @@ public class PlayerAttackItem : MonoBehaviour
         hinge.useSpring = true;
         hinge.useMotor = false;
 
-        EndAttack();
+        StartCoroutine("WaitForColliderDisabling");
     }
 
-    private void EndAttack()
+    public IEnumerator WaitForColliderDisabling()
     {
-        StartCoroutine("WaitForRelaxation");
+        yield return new WaitForSeconds(colliderOffTime);
+
+        itemCollider.enabled = false;
+
+        StartCoroutine("WaitForNextHitReadiness");
     }
 
-    public IEnumerator WaitForRelaxation()
+    public IEnumerator WaitForNextHitReadiness()
     {
         yield return new WaitForSeconds(relaxationTime);
 
+        itemCollider.enabled = true;
         isAttacking = false;
     }
 
