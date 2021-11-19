@@ -20,7 +20,6 @@ public class CameraScript : MonoBehaviour
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out ray))
         {
             currentRaycastTarget = ray.transform.gameObject;
-            Debug.Log(currentRaycastTarget);
 
             ClickableTypo clickableObject = currentRaycastTarget.GetComponent<ClickableTypo>();
             if (clickableObject != null)

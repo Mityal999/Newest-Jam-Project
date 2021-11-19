@@ -12,6 +12,9 @@ public class EnemyEntity : Entity
     public float chaseDistance;
     public float attackDistance;
 
+    public GameObject deathParticleObj;
+    public GameObject damageParticleObj;
+
 
 
     private void Start()
@@ -51,12 +54,24 @@ public class EnemyEntity : Entity
 
     public override void OnDamageRecieved(float damage)
     {
-
+        damageParticleObj.SetActive(false);
+        damageParticleObj.SetActive(true);
     }
 
     public override void Die()
     {
+        deathParticleObj.SetActive(false);
+        deathParticleObj.SetActive(true);
+
+        StartCoroutine("SceduledDeath");
+    }
+
+
+    public IEnumerator SceduledDeath()
+    {
+        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
     }
+
 
 }

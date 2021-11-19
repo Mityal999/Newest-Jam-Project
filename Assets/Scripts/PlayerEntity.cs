@@ -16,7 +16,7 @@ public class PlayerEntity : Entity
 
     public float regenHp;
 
-    public float speed = 6.0f;
+    public float speed = 4.0f;
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
 
@@ -41,13 +41,18 @@ public class PlayerEntity : Entity
         if (characterController.isGrounded)
         {
             moveDirection = transform.forward * Input.GetAxis("Vertical")   +   transform.right * Input.GetAxis("Horizontal");
-            moveDirection *= speed;
+
+            if (Input.GetKey(KeyCode.LeftShift))
+                moveDirection *= 1.5f * speed;
+            else
+                moveDirection *= speed;
 
             if (Input.GetButton("Jump"))
             {
                 moveDirection.y = jumpSpeed;
                 jumpSoundSystem.PlayJumpSound();
             }
+
         }
 
         moveDirection.y -= gravity * Time.deltaTime;
