@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    [SerializeField] private string level2;
-    [SerializeField] private GameObject uiElement;
+    [SerializeField] private string nextSceneStr;
+    //[SerializeField] private GameObject uiElement;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -14,21 +14,21 @@ public class Door : MonoBehaviour
         
         if(other.CompareTag("Player"))
         {
-            uiElement.SetActive(true);
+            //uiElement.SetActive(true)
             
 
             if (true)
             {
-                SceneManager.LoadScene(level2);
+                SceneManager.LoadScene(nextSceneStr);
             }
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if(other.CompareTag("Player"))
-        {
-            uiElement.SetActive(false);
-        }
-    }
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if(other.CompareTag("Player"))
+    //    {
+    //        uiElement.SetActive(false);
+    //    }
+    //}
 }

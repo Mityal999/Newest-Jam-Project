@@ -20,6 +20,7 @@ public class ClickableTypo : MonoBehaviour
 
     private void ShowTypo()
     {
+        Cursor.visible = true;
         typoscreen.GetComponentInChildren<Text>().text = typoText;
         typoscreen.SetActive(true);
         Destroy(gameObject);

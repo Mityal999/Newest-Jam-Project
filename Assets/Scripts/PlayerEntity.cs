@@ -110,6 +110,7 @@ public class PlayerEntity : Entity
         dieSoundPlayer.PlayOnce();
         deathcanvas.SetActive(true);
         healthBar.gameObject.SetActive(false);
+        Cursor.visible = true;
     }
     public void Respawn()
     {
