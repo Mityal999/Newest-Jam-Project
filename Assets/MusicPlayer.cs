@@ -33,4 +33,13 @@ public class MusicPlayer : MonoBehaviour
     {
         _audioSource.Stop();
     }
+
+
+    public void ChangeMusic(AudioClip audioClip)
+    {
+        _audioSource.Stop();
+        _audioSource.clip = audioClip;
+        _audioSource.Play();
+    }
+
 }

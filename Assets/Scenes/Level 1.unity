@@ -3063,6 +3063,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2838102591105322076, guid: d9e53a06e37db2e448b466990bd2c2de, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.63561296
+      objectReference: {fileID: 0}
     - target: {fileID: 2838102591142262517, guid: d9e53a06e37db2e448b466990bd2c2de, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3115,6 +3119,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2838102592769634545, guid: d9e53a06e37db2e448b466990bd2c2de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838102592769634559, guid: d9e53a06e37db2e448b466990bd2c2de, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f7e824999e6fb304bba10777447daca9, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9e53a06e37db2e448b466990bd2c2de, type: 3}
 --- !u!1001 &1930224737
