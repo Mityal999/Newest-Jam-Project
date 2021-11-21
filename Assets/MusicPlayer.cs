@@ -34,11 +34,11 @@ public class MusicPlayer : MonoBehaviour
         _audioSource.Stop();
     }
 
-
     public void ChangeMusic(AudioClip audioClip)
     {
         _audioSource.Stop();
         _audioSource.clip = audioClip;
+        _audioSource.volume = 0.7f;
         _audioSource.Play();
     }
 
