@@ -5,30 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    [SerializeField] private string nextSceneStr;
-    //[SerializeField] private GameObject uiElement;
+    public int levelIndex;
+
+    private LevelChanger levelChanger;
+
+    private void Start()
+    {
+        levelChanger = FindObjectOfType<LevelChanger>();
+    }
+
 
     private void OnTriggerEnter(Collider other)
-    {
-        
-        
+    {        
         if(other.CompareTag("Player"))
         {
-            //uiElement.SetActive(true)
-            
-
-            if (true)
-            {
-                SceneManager.LoadScene(nextSceneStr);
-            }
+            levelChanger.FadeToLevel(levelIndex);
         }
     }
 
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if(other.CompareTag("Player"))
-    //    {
-    //        uiElement.SetActive(false);
-    //    }
-    //}
 }

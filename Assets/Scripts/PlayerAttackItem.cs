@@ -29,7 +29,6 @@ public class PlayerAttackItem : MonoBehaviour
     public float GetCurrentDamage()
     {
         float mul = damagingPartRb.velocity.magnitude;
-        Debug.Log(mul);
         float normalizedMul = 0f;
 
         if (mul < 1f)

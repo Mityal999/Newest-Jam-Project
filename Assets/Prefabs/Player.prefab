@@ -261,7 +261,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2838102591155283654}
   m_LocalRotation: {x: 0.10967362, y: 0, z: 0, w: 0.99396765}
-  m_LocalPosition: {x: -0.013, y: 0.494, z: 0.236}
+  m_LocalPosition: {x: -0.013, y: 0.494, z: 0.401}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2838102591927348375}
@@ -277,7 +277,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -292,7 +292,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 74
+  field of view: 79.6
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1529,7 +1529,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4767e7aa083ad924c8a9a6a4bf37b9a7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.222
+  m_Volume: 0.375
   m_Pitch: 1
   Loop: 1
   Mute: 0

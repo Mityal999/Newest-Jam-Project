@@ -14,8 +14,7 @@ public class EnemyEntity : Entity
 
     public GameObject deathParticleObj;
     public GameObject damageParticleObj;
-
-
+    public float turnSpeedOnAttack;
 
     private void Start()
     {
@@ -26,7 +25,7 @@ public class EnemyEntity : Entity
 
 
 
-    private void Update()
+    private void FixedUpdate()
     {
         //Рассчитать расстояние до игрока и преследовать его, если оно мало
         float distanceToPlayer = (playerObj.transform.position - gameObject.transform.position).magnitude;
@@ -39,6 +38,10 @@ public class EnemyEntity : Entity
         {
             agent.isStopped = true;
             attackItem.TryAttack();
+
+            Vector3 dir = playerObj.transform.position - transform.position;
+            dir.Normalize();
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), turnSpeedOnAttack);
         }
     }
 
