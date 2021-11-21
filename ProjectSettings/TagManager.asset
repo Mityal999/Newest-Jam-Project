@@ -8,6 +8,8 @@ TagManager:
   - StoneFloor
   - PlayerWeapon
   - EnemyWeapon
+  - Walls
+  - EyeKillable
   layers:
   - Default
   - TransparentFX
