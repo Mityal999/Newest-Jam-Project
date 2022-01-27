@@ -107,17 +107,17 @@ public class PlayerEntity : Entity
 
     public override void Die()
     {
+        isImmune = true;
+
         dieSoundPlayer.PlayOnce();
+
+        MusicPlayer musicPlayer = FindObjectOfType<MusicPlayer>();
+        musicPlayer.StopMusic();
+
         deathcanvas.SetActive(true);
         healthBar.gameObject.SetActive(false);
         Cursor.visible = true;
     }
-    public void Respawn()
-    {
-        characterController.enabled = false;
-        currentHp = initialHp;
-        healthBar.SetHealth(currentHp);
-        transform.position = respawnTransform.position;
-        characterController.enabled = true;
-    }
+
+
 }

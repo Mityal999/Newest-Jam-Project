@@ -12,7 +12,8 @@ public class NearWinTrigger : MonoBehaviour
         {
             MusicPlayer musicPlayer = FindObjectOfType<MusicPlayer>();
             musicPlayer.ChangeMusic(newAudioClip);
-            
+
+
         }
     }
 

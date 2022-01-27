@@ -527,7 +527,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.33333334
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: a3c709a252b94e1409350e9080826643, type: 2}
 --- !u!4 &262563704 stripped
@@ -4089,6 +4089,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5899807294658941370, guid: 21270ef90318d90439fdae20974f691c, type: 3}
   m_PrefabInstance: {fileID: 2050814503}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2050814505 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6533460636420524800, guid: 21270ef90318d90439fdae20974f691c, type: 3}
+  m_PrefabInstance: {fileID: 2050814503}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2050814506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050814505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 818c39def44cd0648ae9b10d872b6dfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialHp: 20
+  currentHp: 20
+  immunityTime: 0.1
+  isImmune: 0
 --- !u!1 &2059707970
 GameObject:
   m_ObjectHideFlags: 0

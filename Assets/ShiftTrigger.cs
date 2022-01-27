@@ -12,8 +12,8 @@ public class ShiftTrigger : MonoBehaviour
         {
             shiftCanvasObj.SetActive(true);
 
-            Destroy(shiftCanvasObj, 2f);
-            Destroy(gameObject, 2f);
+            Destroy(shiftCanvasObj, 1.5f);
+            Destroy(gameObject, 1.5f);
         }
     }
 }

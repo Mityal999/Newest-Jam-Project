@@ -38,8 +38,13 @@ public class MusicPlayer : MonoBehaviour
     {
         _audioSource.Stop();
         _audioSource.clip = audioClip;
-        _audioSource.volume = 0.7f;
         _audioSource.Play();
     }
+
+    public void ChangeVolume(float newVol)
+    {
+        _audioSource.volume = newVol;
+    }
+
 
 }
